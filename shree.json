@@ -6,7 +6,7 @@
       "key": "T4_douban",
       "name": "影视推荐(T4)",
       "type": 4,
-      "api": "http://www.饭太硬.com/tv",
+      "api": "http://mygzycj.com/api.php?ac=list",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
