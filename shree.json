@@ -1,17 +1,6 @@
 {
-  "spider": "",
-  "lives": [
-    {
-      "group": "redirect",
-      "channels": [
-        {
-          "name": "redirect",
-          "urls": ["proxy://do=live&type=txt&ext=./TV/live.txt"]
-        }
-      ]
-    }
-  ],
-  "wallpaper": "http://maoyingshi.cc/api.php",
+  "spider": "影视推荐(T4)",
+  "version": 1,
   "sites": [
     {
       "key": "T4_douban",
@@ -21,111 +10,25 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
-    },
-    {
-      "key": "csp_IQIYI",
-      "name": "爱奇艺〔SP〕",
-      "type": 3,
-      "api": "csp_IQIYI",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-
-    {
-      "key": "JAV名优",
-      "name": "🚫JAV名优",
-      "type": 0,
-      "api": "http://mygzycj.com/api.php?ac=list",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "adult": true,
-      "warning": "18+内容需年龄验证"
-    },
-    {
-      "key": "乐播资源",
-      "name": "🚫乐播资源",
-      "type": 0,
-      "api": "https://lbapi9.com/api.php/provide/vod/at/xml",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "adult": true
-    },
-    {
-      "key": "色南国资源",
-      "name": "🚫色南国资源",
-      "type": 1,
-      "api": "https://api.sexnguon.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "adult": true
-    },
-    {
-      "key": "酷豆资源",
-      "name": "🚫酷豆资源",
-      "type": 1,
-      "api": "https://api.kdapi.info/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "adult": true
-    },
-    {
-      "key": "奶茶资源",
-      "name": "🚫奶茶资源",
-      "type": 1,
-      "api": "https://caiji.naichaapi.com/inc/apijson_vod.php",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "adult": true
-    },
-    {
-      "key": "KK写真资源",
-      "name": "🚫KK写真",
-      "type": 1,
-      "api": "https://kkzy.me/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "adult": true
-    },
-    {
-      "key": "番号资源",
-      "name": "🚫番号资源",
-      "type": 1,
-      "api": "http://fhapi9.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "adult": true
     }
-
   ],
   "parses": [
     {
-      "name": "聚合解析",
-      "type": 3,
-      "url": "Demo"
+      "name": "默认解析",
+      "url": "https://jx.jsonplayer.com/player/?url="
     },
     {
-      "name": "18+专用解析",
-      "type": 1,
-      "url": "https://nsfw.parse.com/?url=",
-      "forAdult": true,
-      "headers": {
-        "Referer": "https://example.com"
-      }
+      "name": "备用解析",
+      "url": "https://jx.bozrc.com:4433/player/?url="
     }
   ],
-  "rules": {
-    "adultContent": {
-      "ageVerification": true,
-      "warning": "本内容需满18岁方可访问",
-      "defaultHidden": true
+  "flags": ["热门", "最新", "豆瓣高分", "国产", "欧美", "日韩"],
+  "lives": [],
+  "ads": [],
+  "ijk": [
+    {
+      "group": "软解码",
+      "options": []
     }
-  }
+  ]
 }
